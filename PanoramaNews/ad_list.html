@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<title>Panorama 新聞</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=798, initial-scale=1, maximum-scale=1, user-scalable=yes">
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<script src="components/loader.js"></script>
+<link rel="stylesheet" href="components/loader.css">
+<script src="js/purl.js"></script>
+<script src="js/office365api.js"></script>
+<script src="js/common.js"></script>
+<script>
+(function($){
+    $(function(){
+        var _mails = [];
+        if (localStorage.getItem('ad_mails')) {
+            _mails = JSON.parse(localStorage.getItem('ad_mails'));
+        }
+        $('ul.ad-detail li').text('').hide();
+        $('ul.ad-detail li').each(function(i){
+            if (_mails[i]) {
+                $(this).text(_mails[i]['Subject'] || '').show();
+            }
+        });
+        
+    });
+})(jQuery);
+</script>
+<body>
+
+<div id="wrapper" class="detail p-20px">
+    <ul class="ad-detail">
+	<li>1件目の件名</li>
+	<li>2件目の件名</li>
+	<li>3件目の件名</li>
+	<li>4件目の件名</li>
+	<li>5件目の件名</li>
+	<li>6件目の件名</li>
+	<li>7件目の件名</li>
+	<li>8件目の件名</li>
+	</ul>
+</div>
+</body>
+</html>

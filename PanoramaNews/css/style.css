@@ -1,0 +1,311 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  font-family: "HiraMinProN-W6","HiraMinProN-W3","MS PMincho", serif;
+  background: url(../img/bkg2.png) repeat center top;
+  color: #444;
+}
+
+#wrapper {
+  width: 98%;
+  margin: 0 auto;
+}
+#wrapper header {
+  margin: 5px 0 0;
+  position: relative;
+  background: url(../img/bkg_h_line_02.png) repeat-x 0px 167px;
+  border-bottom: solid 2px #000;
+}
+#wrapper header #header-user-pic {
+  position: absolute;
+  top: 56px;
+}
+#wrapper header #header-title {
+  padding: 16px 0 8px;
+  text-align: center;
+  min-height: 131px;
+  background: url(../img/bkg_h_line_01.png) repeat-x 0px 41px;
+}
+#wrapper header #header-title .logo {
+  position: relative;
+  top: 10px;
+  left: 0;
+  display: block;
+  min-height: 136px;
+  background: url(../img/logo.png) no-repeat center center;
+  text-indent: -9999px;
+}
+#wrapper header #header-contents {
+  background: url(../img/bkg_line_y.png) repeat-y center top;
+  font-size: 9px;
+  overflow: hidden;
+  *zoom: 1;
+}
+#wrapper header #header-contents #header-schedule {
+  float: left;
+  width: 50%;
+  vertical-align: top;
+  line-height: 1.5;
+}
+#wrapper header #header-contents #header-schedule dl {
+  padding: 8px 10px 8px 0;
+}
+#wrapper header #header-contents #header-schedule dl dd {
+  white-space: normal;
+}
+#wrapper header #header-contents #header-ad {
+  display: inline-block;
+  width: 49.6%;
+  vertical-align: top;
+  line-height: 1.5;
+}
+#wrapper header #header-contents #header-ad dl {
+  padding: 8px 0 8px 20px;
+}
+#wrapper header #header-contents #header-ad dl dd {
+  width: 100%;
+  white-space: normal;
+}
+#wrapper .mail-btn {
+  overflow: hidden;
+  *zoom: 1;
+}
+#wrapper .mail-btn li {
+  float: left;
+  min-width: 90px;
+  margin: 0 6px 0 0;
+  text-align: center;
+  border: 2px solid #000;
+  font-size: 8px;
+}
+#wrapper .mail-btn li .btn {
+  display: block;
+  padding: 0px 5px;
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+}
+#wrapper .mail-btn li.on .btn {
+  background: none;
+  color: #000;
+}
+#wrapper .mail-btn .btn-attach {
+  min-width: 20px;
+  border: none;
+  color: #808080;
+  padding: 5px 10px;
+}
+#wrapper .mail-btn .btn-attach.on {
+  color: #1d2087;
+}
+#wrapper .mail-date {
+  padding: 0px 0 2px;
+  font-size: 10px;
+}
+#wrapper .mail-img {
+  width: 22.5%;
+  float: left;
+  padding: 0 5px 3px 0;
+}
+#wrapper .mail-img img {
+  width: 100%;
+  height: auto;
+}
+#wrapper .mail-title {
+  font-size: 20px;
+  padding: 0 0 5px;
+}
+#wrapper .mail-text {
+  font-size: 9px;
+}
+#wrapper .mail-link {
+  clear: both;
+  margin: 5px 0 0;
+  padding: 0 0 5px;
+  text-align: left;
+  font-size: 8px;
+}
+#wrapper .mail-link a {
+  display: inline-block;
+  padding: 2px;
+  color: #1d2087;
+}
+#wrapper #mail-l {
+  margin: 5px 0 0;
+  background: url(../img/bkg_line_y.png) repeat-y center top;
+}
+#wrapper #mail-l:before, #wrapper #mail-l:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+#wrapper #mail-l:after {
+  clear: both;
+}
+#wrapper #mail-l .bd-h {
+  float: left;
+  width: 50%;
+  vertical-align: top;
+  line-height: 1.5;
+}
+#wrapper #mail-l #mail-l-01 .mail-inner {
+  margin: 0 20px 0 0;
+}
+#wrapper #mail-l #mail-l-02 .mail-inner {
+  margin: 0 0 0 20px;
+}
+#wrapper #mail-l .mail-link {
+  padding: 0 0 0px;
+}
+#wrapper #mail-r {
+  margin: 5px 0 0;
+  padding: 5px 0 0;
+  overflow: hidden;
+  *zoom: 1;
+  border-top: 1px solid #000;
+}
+#wrapper #mail-r .mail-inner {
+  border-bottom: 1px solid #000;
+  margin: 0 5px 5px;
+}
+#wrapper #mail-r .bd-h {
+  float: left;
+  width: 33.3%;
+  vertical-align: top;
+  line-height: 1.5;
+}
+#wrapper #mail-r .bd-h:nth-child(3n+1) {
+  margin: 0 0 0 -5px;
+}
+#wrapper #mail-r .bd-h:nth-child(3n+2) {
+  background: url(../img/bkg_line_y.png) repeat-y 4px 0;
+}
+#wrapper #mail-r .bd-h:nth-child(3n+2) .mail-inner {
+  margin: 0 0 5px 10px;
+}
+#wrapper #mail-r .bd-h:nth-child(3n+3) {
+  float: right;
+  background: url(../img/bkg_line_y.png) repeat-y 4px 0;
+}
+#wrapper #mail-r .bd-h:nth-child(3n+3) .mail-inner {
+  margin: 0 0 5px 10px;
+}
+#wrapper #mail-r .mail-btn li {
+  min-width: 50px;
+  font-size: 8px;
+}
+#wrapper #mail-r .mail-btn .btn-attach {
+  min-width: 20px;
+}
+#wrapper #mail-r .mail-date {
+  font-size: 10px;
+}
+#wrapper #mail-r .mail-title {
+  font-size: 12px;
+  padding: 0 0 2px;
+}
+#wrapper #mail-r .mail-text {
+  font-size: 9px;
+}
+#wrapper #mail-r .mail-link {
+  font-size: 7px;
+}
+#wrapper #task {
+  border: 5px solid #000;
+  border-bottom: 4px solid #000;
+}
+#wrapper #task dt {
+  padding: 10px 10px 10px;
+  font-size: 10px;
+}
+#wrapper #task dd {
+  padding: 0 10px 10px;
+  white-space: normal !important;
+  font-size: 8px;
+}
+#wrapper #task dd + dd {
+  padding: 10px;
+  border-top: 1px dashed #000;
+}
+#wrapper .ad-detail {
+  font-size: 16px;
+  line-height: 1.8;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+#wrapper .mail-detail {
+  border-top: 2px solid #999;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+#wrapper .mail-detail:first-child {
+  border-top: none;
+}
+#wrapper .mail-detail dt {
+  float: left;
+  width: 3em;
+  font-size: 16px;
+  font-weight: bold;
+}
+#wrapper .mail-detail dd {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+#wrapper.p-20px {
+  padding: 20px;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Panorama新聞</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=798, initial-scale=1, maximum-scale=1, user-scalable=yes">
+<script src="components/loader.js"></script>
+<link rel="stylesheet" href="components/loader.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<script src="js/purl.js"></script>
+<script src="js/office365api.js"></script>
+<script src="js/common.js"></script>
+<script>
+$(function(){
+
+    var $wrapper = $('#wrapper');
+    var $div = $('.mail-detail:first', $wrapper).clone();
+    
+    $wrapper.empty();
+
+    var _mail =  null, _accessToken = null;
+    if (localStorage.getItem('mail_detail')) {
+            _mail = JSON.parse(localStorage.getItem('mail_detail'));
+    }
+    var _accessToken = localStorage.getItem('access_token') || null;
+    
+    if (!_mail || !_accessToken) {
+        return;
+    }
+    
+    var _conversationId = _mail['ConversationId'] || '';
+    
+    // APIへのアクセスが必要
+    var _o = Office365Api;
+    _o.initForSubPage.call(_o, _accessToken);
+
+    
+    _o.getMailsByConversationId.call(_o, _conversationId).then(function(mails){
+       
+       // 逆順にする
+       mails.reverse();
+       
+       $.each(mails,function(k,v){
+           
+           var $clone = $div.clone();
+          
+          $('.mail-title', $clone).text(v['Subject']);
+          
+          var _dt = createMyDate(v["DateTimeReceived"] || null);
+          
+          $('.mail-date', $clone).text(_dt.toDisplay());
+          
+          var _content = getMailBodyHtml(v);
+          
+           $('.mail-body', $clone).html(_content);
+           
+           var _id = v['Id'] || '';
+           
+           console.log('_id:'+_id);
+           if (v['IsRead']) {
+                $('.mail-read', $clone).hide();    
+           } else {
+                $('.mail-read', $clone).off('click').on('click', function(e){
+
+                $(this).hide();
+                        
+                _o.setRead.call(_o, _id);
+             
+                return false;
+            });
+          }
+          $wrapper.append($clone);
+          
+       });
+        
+    });
+
+});        
+</script>
+<body>
+
+<div id="wrapper" class="detail p-20px">
+    <div class="mail-detail">
+		<a href="#" class="btn w-100px mail-read">既読</a>
+		<dl>
+			<dd></dd>
+			<dt>日付</dt><dd class="mail-date">4月4日（金） hh:mm</dd>
+			<dt>件名</dt><dd class="mail-title">ここにテキスト</dd>
+			<dt>本文</dt><dd class="mail-body">ここに本文。</dd>
+		</dl>
+	</div>
+	<div class="mail-detail">
+		<a href="#" class="btn w-100px">既読</a>
+		<dl>
+			<dd></dd>
+			<dt>日付</dt><dd>4月3日（金） hh:mm</dd>
+			<dt>件名</dt><dd>ここにテキスト</dd>
+			<dt>本文</dt><dd>ここに本文。</dd>
+		</dl>
+	</div>
+	<div class="mail-detail">
+		<a href="#" class="btn w-100px">既読</a>
+		<dl>
+			<dd></dd>
+			<dt>日付</dt><dd>4月3日（金） hh:mm</dd>
+			<dt>件名</dt><dd>ここにテキスト</dd>
+			<dt>本文</dt><dd>ここに本文。</dd>
+		</dl>
+	</div>
+	<div class="mail-detail">
+		<a href="#" class="btn w-100px">既読</a>
+		<dl>
+			<dd></dd>
+			<dt>日付</dt><dd>4月3日（金） hh:mm</dd>
+			<dt>件名</dt><dd>ここにテキスト</dd>
+			<dt>本文</dt><dd>ここに本文。</dd>
+		</dl>
+	</div>
+	<div class="mail-detail">
+		<a href="#" class="btn w-100px">既読</a>
+		<dl>
+			<dd></dd>
+			<dt>日付</dt><dd>4月3日（金） hh:mm</dd>
+			<dt>件名</dt><dd>ここにテキスト</dd>
+			<dt>本文</dt><dd>ここに本文。</dd>
+		</dl>
+	</div>
+	<div class="mail-detail">
+		<a href="#" class="btn w-100px">既読</a>
+		<dl>
+			<dd></dd>
+			<dt>日付</dt><dd>4月3日（金） hh:mm</dd>
+			<dt>件名</dt><dd>ここにテキスト</dd>
+			<dt>本文</dt><dd>ここに本文。</dd>
+		</dl>
+	</div>
+</div>
+</body>
+</html>

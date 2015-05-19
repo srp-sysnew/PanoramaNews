@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<title>Panorama 新聞</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=798, initial-scale=1, maximum-scale=1, user-scalable=yes">
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<script src="components/loader.js"></script>
+<link rel="stylesheet" href="components/loader.css">
+<script src="js/purl.js"></script>
+<script src="js/office365api.js"></script>
+<script src="js/common.js"></script>
+
+<script>
+(function($){
+    $(function(){
+        var _mail = null;
+        if (localStorage.getItem('mail_detail')) {
+            _mail = JSON.parse(localStorage.getItem('mail_detail'));
+        }
+        
+        $('.mail-subject').text('');
+        
+        if (_mail) {
+            $('.mail-subject').text( _mail['Subject'] || '');
+            
+            var _dt = createMyDate(_mail["DateTimeReceived"] || null);
+            $('.mail-date').text(_dt.toDisplay());
+            var _content = getMailBodyHtml(_mail);
+            $('.mail-body').html(_content);
+        }
+    });
+})(jQuery);
+</script>
+<body>
+<div id="wrapper" class="detail p-20px">
+    <dl class="mail-detail">
+		<dt>日付</dt><dd class="mail-date">4月3日（金） hh:mm</dd>
+		<dt>件名</dt><dd class="mail-subject">ここにテキスト</dd>
+		<dt>本文</dt><dd class="mail-body"></dd>
+	</dl>
+</div>
+</body>
+</html>

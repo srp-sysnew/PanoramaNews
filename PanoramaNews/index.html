@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Panorama新聞</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.5, user-scalable=yes">
+<script src="components/loader.js"></script>
+<link rel="stylesheet" href="components/loader.css">
+<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+<script src="js/purl.js"></script>
+<script src="js/office365api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/top_page.js"></script>
+<script>
+$(function(){
+
+//   $('body').empty();
+           
+//TopPage.init.call(TopPage); return;
+
+    $('input#btn_login')
+    .off('click').on('click', function (e) {
+        $('p#first_message').text('ログイン処理中です...');
+        TopPage.init.call(TopPage);
+        return false;
+    });
+        
+//  $('body').append($button);
+
+    $('input#btn_login2')
+        .off('click').on('click', function(e){
+            $('p#first_message').text('ログイン処理中です...');
+            Office365Api.logoff.call(Office365Api);
+            TopPage.init.call(TopPage);
+        return false;            
+        });
+
+//  $('body').append($button2);
+
+});        
+</script>
+</head>
+<body>
+    <h1 style="margin:10px;">パノラマ新聞</h1>
+    <p style="margin:10px;">
+        Microsoft Office 365アカウントでログインして下さい。
+    </p>
+    <p style="margin:10px;">
+        <input id="btn_login" type="button" value="ログイン(前回ログイン情報を引き継ぎます)" style="width:400px;height:50px;" />
+    </p>    
+    <p style="margin:10px;">
+        <input id="btn_login2" type="button" value="リセット＆ログイン" style="width:400px;height:50px;" />
+    </p>
+    <p style="margin:10px;" id="first_message">
+    </p>
+</body>
+</html>
