@@ -1,16 +1,24 @@
 # PanoramaNews
-�{�v���O�����́u�p�m���}�V���v��monaca�p�v���W�F�N�g�̈ꕔ�𔲐��������̂ł��B
+本プログラムは「パノラマ新聞」の[Monaca](https://ja.monaca.io/)用プロジェクトの一部(www以下)を抜粋したものです。
+
+# Requirement
+* [Monaca](https://ja.monaca.io/)。ただし Crodova が利用できれば、その限りでないです。
+* Windows Azure AD への アプリケーション(NativeClient)登録。
 
 # Usage
-1. monaca�ɂāu�ŏ����̃e���v���[�g�v���x�[�X�ɐV�K�v���W�F�N�g�쐬�B
+1.[Monaca](https://ja.monaca.io/)にて「最小限のテンプレート」をベースに新規プロジェクト作成。
 
-2.�uCordova�v���O�C���̊Ǘ��v���J���B
-  a. Cordova�o�[�W���� 4.1.0 ��I���B
-  b.�uInAppBrowser�v�uSplashscreen�v�uMonacaPlugin�v���܂܂�Ă��邱�Ƃ��m�F�B
-3. �uJS/CSS�R���|�[�l���g�̒ǉ��ƍ폜�v���J���B
-  Cordova(PhoneGap)Loader�v (1.0.0)�A�uMonaca Core Utility�v(2.0.4)�A�ujQuery(Monaca Version)�v(2.0.3)���܂܂�Ă��邱�Ƃ��m�F�B
-4.�uPanoramaNews/www�v�ȉ��ꎮ�� www �ȉ��ɃR�s�[�B
-5. js/office365api.js �� "clientId:'12345678-1234-1234-1234-123456789012'"��K�؂Ȃ��̂ɕύX�B
-6. ���s�I
+2.「Cordovaプラグインの管理」を開く。  
+a. Cordovaバージョン 4.1.0 を選択。  
+b.「InAppBrowser」「Splashscreen」「MonacaPlugin」が含まれていることを確認。
+
+3.「JS/CSSコンポーネントの追加と削除」を開く。  
+Cordova(PhoneGap)Loader」 (1.0.0)、「Monaca Core Utility」(2.0.4)、「jQuery(Monaca Version)」(2.0.3)が含まれていることを確認。
+
+4.「PanoramaNews/www」以下一式を www 以下にコピー。
+
+5.js/office365api.js の "clientId:'12345678-1234-1234-1234-123456789012'"を適切なものに変更。
+
+6.実行！
 
 
