@@ -1,6 +1,6 @@
 # PanoramaNews
 本プログラムは「パノラマ新聞」の[Monaca](https://ja.monaca.io/)用プロジェクトの一部(www以下)を抜粋したものです。  
-Window Office365 API を利用します。
+Windows Office365 API を利用します。
 
 # Requirement
 * [Monaca](https://ja.monaca.io/)。ただし Crodova が利用できれば、その限りでないです。
