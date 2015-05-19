@@ -9,15 +9,16 @@ Windows Office365 API を利用します。
 # Windows AzureAD
 Office365 API を OAuthで利用しているので、あらかじめアプリケーションの設定が必要になります。  
 
-1. AzureAD より アプリケーション(NativeClient)を新規追加。  
+1. AzureAD より アプリケーション(NativeClient)を新規追加。
 
-2. リダイレクトURLは "http://localhost/callback" を設定。  
+2. リダイレクトURLは "http://localhost/callback" を設定。
 
-3. アプリケーション追加で "Office 365 Exchange Online" のアクセス許可を追加しておく。  
+3. アプリケーション追加で "Office 365 Exchange Online" のアクセス許可を追加しておく。
 
-4. "クライアント ID" を控えておく。  
+4. "クライアント ID" を控えておく。
 
 # Usage
+
 1.[Monaca](https://ja.monaca.io/)にて「最小限のテンプレート」をベースに新規プロジェクト作成。
 
 2.「Cordovaプラグインの管理」を開く。  
