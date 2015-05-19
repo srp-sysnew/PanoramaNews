@@ -4,7 +4,7 @@ Windows Office365 API を利用します。
 
 # Requirement
 * [Monaca](https://ja.monaca.io/)。ただし Crodova が利用できれば、その限りでないです。
-* Windows Azure AD への アプリケーション(NativeClient)登録。
+* Windows AzureAD への アプリケーション(NativeClient)登録。
 
 # Windows AzureAD
 Office365 API を OAuthで利用しているので、あらかじめアプリケーションの設定が必要になります。  
