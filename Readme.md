@@ -1,6 +1,6 @@
 # PanoramaNews
 本プログラムは「panorama新聞」の[Monaca](https://ja.monaca.io/)用プロジェクトの一部(www以下)を抜粋したものです。  
-「panorama新聞」は[株式会社セラフ](http://www.srp.co.jp/)にて作成されました。
+「panorama新聞」は[株式会社セラフ](http://www.srp.co.jp/)にて作成されました。  
 Windows Office365 API を利用し、Exchange Online メールを記事形式で表示するiPadアプリです。
 
 # Requirement
