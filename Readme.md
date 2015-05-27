@@ -4,7 +4,7 @@
 Windows Office365 API を利用し、Exchange Online メールを記事形式で表示するiPadアプリです。
 
 # Requirement
-* [Monaca](https://ja.monaca.io/)。ただし Crodova が利用できれば、その限りでないです。
+* [Monaca](https://ja.monaca.io/)。ただし Cordova が利用できれば、その限りでないです。
 * Windows AzureAD への アプリケーション(NativeClient)登録。
 
 # Windows AzureAD
