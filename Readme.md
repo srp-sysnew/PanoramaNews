@@ -36,5 +36,5 @@ Cordova(PhoneGap)Loader」 (1.0.0)、「Monaca Core Utility」(2.0.4)、「jQuer
 
 6. 実行！
 
-## License
+# License
 MIT
