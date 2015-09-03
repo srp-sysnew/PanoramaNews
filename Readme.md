@@ -35,6 +35,3 @@ Cordova(PhoneGap)Loader」 (1.0.0)、「Monaca Core Utility」(2.0.4)、「jQuer
 5. js/office365api.js の "clientId:'12345678-1234-1234-1234-123456789012'"を適切な"クライアント ID"へ変更。
 
 6. 実行！
-
-# License
-MIT
